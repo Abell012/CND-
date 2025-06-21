@@ -2,7 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = async (req, res) => {
-    const id = req.query[0];
+    const id = req.url.replace('/', '').split('?')[0]; // ambil ID dari path
+
+    if (!id) return res.status(400).send('Invalid image ID');
+
     const filePath = path.join('/tmp', id);
     
     try {
