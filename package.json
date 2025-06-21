@@ -1,0 +1,14 @@
+{
+  "name": "fast-image-cdn",
+  "version": "1.0.0",
+  "description": "Simple image CDN with 3-hour expiration",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
