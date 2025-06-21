@@ -2,12 +2,15 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = async (req, res) => {
-    const id = req.url.replace('/', '').split('?')[0]; // ambil ID dari path
+    const rawUrl = req.url || '';
+    const id = rawUrl.replace('/', '').split('?')[0];
 
-    if (!id) return res.status(400).send('Invalid image ID');
+    if (!id || typeof id !== 'string' || id.trim() === '') {
+        return res.status(400).send('Invalid or missing image ID');
+    }
 
     const filePath = path.join('/tmp', id);
-    
+
     try {
         if (fs.existsSync(filePath)) {
             const imageBuffer = fs.readFileSync(filePath);
