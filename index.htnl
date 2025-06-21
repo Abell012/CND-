@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastImageCDN</title>
+    <link rel="icon" href="https://cloudkuimages.guru/uploads/images/685613dfefc27.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="bgVideo">
+        <source src="https://cloudkuimages.guru/uploads/videos/685613432c110.mp4" type="video/mp4">
+    </video>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="https://cloudkuimages.guru/uploads/images/685613dfefc27.jpg" alt="Logo">
+            <h1>FastImageCDN</h1>
+        </div>
+        
+        <div class="upload-box">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept="image/*">
+                <label for="fileInput" class="upload-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <span>Pilih gambar atau seret ke sini</span>
+                    <small>Maksimal 4.5 MB</small>
+                </label>
+            </div>
+            
+            <div class="result" id="result">
+                <div class="url-box">
+                    <input type="text" id="imageUrl" readonly>
+                    <button id="copyBtn">Salin</button>
+                </div>
+                <button id="uploadAgain" class="secondary-btn">Upload Lagi</button>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>Fast Upload</h3>
+                <p>Unggah gambar dengan cepat dan mudah</p>
+            </div>
+            <div class="feature">
+                <h3>CDN FREE</h3>
+                <p>Layanan CDN gratis tanpa biaya</p>
+            </div>
+            <div class="feature">
+                <h3>Expired 3 Jam</h3>
+                <p>Gambar otomatis terhapus setelah 3 jam</p>
+            </div>
+            <div class="feature">
+                <h3>API Developer</h3>
+                <p>Dukungan API untuk pengembang</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
